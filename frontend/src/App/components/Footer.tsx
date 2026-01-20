@@ -1,3 +1,4 @@
+import { Link} from 'react-router-dom';
 import { faFacebook, faLine } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -87,9 +88,9 @@ const Footer = () => {
 
         {/* Footer Bottom Links */}
         <div className="mt-10 pt-4 border-t border-gray-400 flex justify-center md:justify-end gap-4 text-xs font-semibold text-gray-700">
-          <a href="#" className="hover:underline">Terms Condition</a>
+          <Link to="#" className="hover:underline">Terms Condition</Link>
           <span>|</span>
-          <a href="#" className="hover:underline">Privacy Policy</a>
+          <Link to="#" className="hover:underline">Privacy Policy</Link>
         </div>
 
       </div>

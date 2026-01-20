@@ -1,8 +1,7 @@
-name = "project-name"
-compatibility_date = "2024-01-01"
-#pages_build_output_dir = "frontend/dist"
+name = "the-nexus"
+pages_build_output_dir = "frontend/build"
 
 [[d1_databases]]
 binding = "DB"
-database_name = "datase_name"
-database_id = "db_id"
+database_name = "the-nexus-db" 
+database_id = "46d6bab4-31f6-4886-bc41-34ba92a3942a" 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import C_HomeMain from '../../components/C_homemain'; 
-import Footer from '../../components/Footerhomemain'; 
+import CHomeMain from '../../components/C_homemain.tsx'; 
+import Footer from '../../components/Footerhomemain.tsx'; 
 
 interface FormData {
   name: string;
@@ -89,7 +89,7 @@ const Adddormitory: React.FC = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-[#f8fcf8]"> 
-      <C_HomeMain />
+      <CHomeMain />
 
       <div className="flex-grow w-full max-w-6xl mx-auto px-6 py-10 flex flex-col items-center">
 

@@ -2,11 +2,15 @@ FROM node:20-alpine
 
 WORKDIR /app
 
+# คัดลอกไฟล์จัดการแพ็กเกจ
 COPY package*.json ./
 RUN npm install
 
+# คัดลอกโค้ดทั้งหมด
 COPY . .
 
-EXPOSE 5173
+# React โดยปกติจะใช้พอร์ต 3000
+EXPOSE 3000
 
-CMD ["npm", "run", "dev", "--", "--host"]
+# ใช้ npm start สำหรับโหมด Development
+CMD ["npm", "start"]

@@ -23,7 +23,7 @@ const ForgotPasswordPage: React.FC = () => {
       setError('รูปแบบอีเมลไม่ถูกต้อง');
     } else {
       try{
-        const response = await fetch('/api/forgotpassword',{
+        const response = await fetch(`/api/forgotpassword`,{
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({ email })
@@ -34,11 +34,12 @@ const ForgotPasswordPage: React.FC = () => {
           throw new Error(result.message || 'เกิดข้อผิดพลาด');
         }
 
-        alert('ระบบตรวจสอบอีเมล ${email} สำเร็จ');
+        alert(`ระบบตรวจสอบอีเมล ${email} สำเร็จ`);
         localStorage.setItem('resetEmail',email);
         window.location.href = '/createpassword';
-      } catch (err: unknown) {
-        setError(err.message);
+      } catch (err) {
+        const error = err as Error;
+        setError(error.message);
       }
     }
   };

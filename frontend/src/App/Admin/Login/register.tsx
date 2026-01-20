@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+declare global {
+  interface Window {
+    __ENV__: {
+      API_BASE: string;
+    };
+  }
+}
 // --- Interface และ Component ย่อย ---
 interface RequiredLabelProps {
   text: string;
@@ -82,7 +89,8 @@ const RegisterPage: React.FC = () => {
       setLoading(true);
       try {
         // 1. สร้าง User ในระบบ Auth (เก็บ Email/Password)
-        const response = await fetch('/api/register',{
+        const API_BASE = window.__ENV__?.API_BASE || "";
+        const response = await fetch(`${API_BASE}/api/register`,{
           method: 'POST' ,
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({

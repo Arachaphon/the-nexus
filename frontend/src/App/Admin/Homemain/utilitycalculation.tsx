@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 // ตรวจสอบ path ของ component ให้ถูกต้องตามโครงสร้างโปรเจคของคุณ
-import C_HomeMain from '../../components/C_homemain'; 
-import Footer from '../../components/Footerhomemain'; 
+import CHomeMain from '../../components/C_homemain.tsx'; 
+import Footer from '../../components/Footerhomemain.tsx'; 
 
 /**
  * Helper สำหรับดึงชื่อประเภทการคำนวณมาแสดงผล
@@ -78,7 +78,7 @@ const UtilityCalculation = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-[#f8fcf8] relative">
-      <C_HomeMain />
+      <CHomeMain />
 
       <div className="flex-grow w-full max-w-6xl mx-auto px-4 py-10 flex flex-col items-center">
         <h1 className="text-2xl font-bold text-[#0e4b3a] mb-10 text-center">ตั้งค่าหอพัก</h1>

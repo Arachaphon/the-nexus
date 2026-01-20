@@ -6,10 +6,11 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     ports:
-      - "5173:5173" # สำหรับ Vite
+      - "3000:3000" # เปลี่ยนเป็น 3000 ให้ตรงกับ React
     volumes:
       - ./frontend:/app
       - /app/node_modules
     environment:
-      - VITE_API_BASE=# # URL Backend ของคุณ
+      # ดึงค่ามาจาก URL ที่คุณเพิ่ง Deploy สำเร็จ
+      - REACT_APP_API_BASE=https://01b39931.the-nexus-4z0.pages.dev
     restart: always

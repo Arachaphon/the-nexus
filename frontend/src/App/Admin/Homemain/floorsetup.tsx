@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Layers, Trash2 } from 'lucide-react'; 
 
 // Mock Components (ถ้า path ของคุณถูกแล้ว ให้ใช้ import เดิมของคุณได้เลย)
-import C_HomeMain from '../../components/C_homemain';
-import Footer from '../../components/Footerhomemain';
+import CHomeMain from '../../components/C_homemain.tsx';
+import Footer from '../../components/Footerhomemain.tsx';
 
 
 interface FloorData {
@@ -109,7 +109,7 @@ const FloorSetup = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-[#f8fcf8]">
-      <C_HomeMain />
+      <CHomeMain />
 
       <div className="flex-grow w-full max-w-6xl mx-auto px-4 py-10 flex flex-col items-center">
         <h1 className="text-2xl font-bold text-[#0e4b3a] mb-10 text-center">ตั้งค่าหอพัก</h1>

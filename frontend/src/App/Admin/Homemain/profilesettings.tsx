@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'; // เติม React และ useEffect
-import C_HomeMain from '../../components/C_homemain'; 
-import Footer from '../../components/Footerhomemain'; 
+import CHomeMain from '../../components/C_homemain.tsx'; 
+import Footer from '../../components/Footerhomemain.tsx'; 
 
 const ProfileSettings: React.FC = () => {
   const [profile, setProfile] = useState({ name: '', email: '' });
@@ -121,7 +121,7 @@ const ProfileSettings: React.FC = () => {
   return (
     // ... ส่วน UI คงเดิมตามที่คุณเขียนมา ...
     <div className="flex flex-col min-h-screen bg-[#f8fcf8]">
-      <C_HomeMain />
+      <CHomeMain />
         {/* Header Bar สีเขียวเข้มตามรูปภาพ */}
         <div className="flex-grow w-full max-w-6xl mx-auto px-6 py-10">
           {/* ส่วนที่ 1: ข้อมูลส่วนตัว */}

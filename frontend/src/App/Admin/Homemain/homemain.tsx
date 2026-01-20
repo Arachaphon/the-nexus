@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import C_HomeMain from '../../components/C_homemain';
-import Footer from '../../components/Footerhomemain';
+import CHomeMain from '../../components/C_homemain.tsx';
+import Footer from '../../components/Footerhomemain.tsx';
 
 const HomeMain = () => {
   const [activeTab, setActiveTab] = useState<'dormitory' | 'users'>('dormitory');
@@ -17,7 +17,7 @@ const HomeMain = () => {
   return (
 
     <div className="flex flex-col min-h-screen">
-      <C_HomeMain />
+      <CHomeMain />
 
       <div className="flex-grow w-full p-6 relative bg-[#f8fcf8] flex flex-col">
 
@@ -69,11 +69,11 @@ const HomeMain = () => {
 
           {activeTab === 'dormitory' ? (
             <div className="text-center text-gray-400 mt-20">
-              {/* <p>Dormitory List Content goes here</p> */}
+              <p>Dormitory List Content goes here</p>
             </div>
           ) : (
             <div className="text-center text-gray-400 mt-20">
-              {/* <p>User List Content goes here</p> */}
+              <p>User List Content goes here</p>
             </div>
           )}
         </div>
